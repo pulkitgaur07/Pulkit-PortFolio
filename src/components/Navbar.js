@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { HiOutlineMail } from 'react-icons/hi'
 import logo from "../assets/portfolios/logo.jpg";
 
 const Navbar = () => {

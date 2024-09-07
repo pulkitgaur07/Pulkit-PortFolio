@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
-import {SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY} from '../constant';
 
 const Contact = () => {
   const form = useRef();
@@ -9,8 +8,8 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs
-      .sendForm(SERVICE_ID,TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY,
+      .sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, {
+        publicKey: process.env.REACT_APP_PUBLIC_KEY,
       })
       .then(
         () => {
