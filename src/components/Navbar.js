@@ -28,6 +28,10 @@ const Navbar = () => {
       id: 5,
       link: "education",
     },
+    {
+      id: 6,
+      link: "contact",
+    }
   ];
 
   return (
@@ -56,8 +60,6 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        <Link to="contact" smooth duration={500}><HiOutlineMail className="hidden md:flex cursor-pointer" size={30} /></Link>
 
         {/* Baricons */}
         <div
