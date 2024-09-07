@@ -39,7 +39,7 @@ const Projects = () => {
           <p className="text-4xl font-bold inline border-b-4 p-1 border-gray-500 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text mb-8">Projects</p>
           </div>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-0">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
         {projects.map(({id,src,title})=>(
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 p-2">
             <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-cover" style={{ "--image-url": `url(${src})`}}>

@@ -21,7 +21,7 @@ const Coding = () => {
       id: 2,
       src: gfg,
       link : 'https://www.geeksforgeeks.org/user/stranger_99/',
-      title: "GeeksForGeeks",
+      title: "GFG",
       rating: "Coding Score : 2275",
       description: "Solved 650+ Problems with a Streak of 350+ Days.",
       style: "shadow-green-600",
