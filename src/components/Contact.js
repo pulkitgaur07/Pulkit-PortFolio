@@ -1,11 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const form = useRef();
+  const [loading, setLoading] = useState(false);
   const sendEmail = (e) => {
     e.preventDefault();
+    setLoading(true);
 
     emailjs
       .sendForm(process.env.REACT_APP_SERVICE_ID,process.env.REACT_APP_TEMPLATE_ID, form.current, {
@@ -15,11 +17,13 @@ const Contact = () => {
         () => {
           console.log("SUCCESS!");
           toast.success("Your Message send Sucessfully");
-
+          form.current.reset();
+          setLoading(false);
         },
         (error) => {
           console.log("FAILED...", error.text);
           toast.error("Something went Wrong!!");
+          setLoading(false);
         }
       );
   };
@@ -53,9 +57,10 @@ const Contact = () => {
               className="p-2 bg-transparent border-2 border-black rounded-md text-black"
             ></textarea>
             <input
-              className="text-black bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover::scale-110 duration-300 cursor-pointer"
+              className={`text-black bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-4 mx-auto flex items-center rounded-md hover::scale-110 duration-300 ${loading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
               type="submit"
-              value="Let's Talk"
+              value={loading ? "Sending..." : "Let's Talk"}
+              disabled = {loading}
             />
           </form>
         </div>
