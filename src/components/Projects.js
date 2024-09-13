@@ -43,7 +43,7 @@ const Projects = () => {
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
         {projects.map(({id,src,title})=>(
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 p-2">
-            <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-cover" style={{ "--image-url": `url(${src})`}}>
+            <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-contain" style={{ "--image-url": `url(${src})`}}>
             </div>
             <div>{title}</div>
             <div className="flex items-center space-x-4 py-2">
