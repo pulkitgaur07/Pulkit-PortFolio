@@ -1,6 +1,7 @@
 import React from "react";
 import SilverSpoons from "../assets/SilverSpoons.jpg";
 import portfolio from "../assets/port.jpg";
+import sudokuSolver from "../assets/sudokuSolver.jpg";
 
 const Projects = () => {
 
@@ -15,7 +16,7 @@ const Projects = () => {
         },
         {
             id : 3,
-            src : SilverSpoons
+            src : sudokuSolver
         },
         {
             id : 4,
