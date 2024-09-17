@@ -1,34 +1,39 @@
 import React from "react";
 import SilverSpoons from "../assets/SilverSpoons.jpg";
 import portfolio from "../assets/port.jpg";
-import sudokuSolver from "../assets/sudokuSolver.jpg";
+import sudokuSolver from "../assets/sudokuSolver.png";
+import chatapp from "../assets/chatapp.jpg";
 
 const Projects = () => {
 
     const projects = [
         {
             id : 1,
+            title : "SilverSpoons",
             src : SilverSpoons,
+            link : "https://silverspoons.onrender.com/",
+            github : "https://github.com/pulkitgaur07/namaste-react",
         },
         {
             id : 2,
-            src : portfolio,
+            title : "Chat App",
+            src : chatapp,
+            link : "https://chat-app-socket-vx7y.onrender.com",
+            github : "https://github.com/pulkitgaur07/Chat_App_Socket",
         },
         {
             id : 3,
-            src : sudokuSolver
+            title : "Sudoku Solver",
+            src : sudokuSolver,
+            link : "https://sudokusolver07.netlify.app/",
+            github : "https://github.com/pulkitgaur07/Sudoku-Solver",
         },
         {
             id : 4,
-            src : SilverSpoons
-        },
-        {
-            id : 5,
-            src : SilverSpoons
-        },
-        {
-            id : 6,
-            src : SilverSpoons
+            title : "PortFolio",
+            src : portfolio,
+            link : "https://pulkitportfolio.onrender.com/",
+            github : "https://github.com/pulkitgaur07/Pulkit-PortFolio",
         }
     ]
 
@@ -41,14 +46,14 @@ const Projects = () => {
           </div>
         </div>
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
-        {projects.map(({id,src,title})=>(
+        {projects.map(({id,src,link,github,title})=>(
             <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 p-2">
-            <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-contain" style={{ "--image-url": `url(${src})`}}>
+            <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-cover" style={{ "--image-url": `url(${src})`}}>
             </div>
-            <div>{title}</div>
+            <div className="font-bold text-md mt-2">{title}</div>
             <div className="flex items-center space-x-4 py-2">
-              <a href="https://silverspoons.onrender.com/" target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Live</a>
-              <a href="https://silverspoons.onrender.com/" target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</a>
+              <a href={link} target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Live</a>
+              <a href={github} target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</a>
             </div>
           </div>
         ))}
