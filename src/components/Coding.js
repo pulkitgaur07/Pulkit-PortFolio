@@ -14,7 +14,7 @@ const Coding = () => {
       link : 'https://leetcode.com/u/pulkitgaur07/',
       title: "Leetcode",
       rating: "Max Rating : 1758",
-      description: "Solved 800+ Problems with a Streak of 500+ Days.",
+      description: "Solved 1000+ Problems with a Streak of 750+ Days.",
       style: "shadow-yellow-600",
     },
     {
@@ -22,8 +22,8 @@ const Coding = () => {
       src: gfg,
       link : 'https://www.geeksforgeeks.org/user/stranger_99/',
       title: "GFG",
-      rating: "Coding Score : 2275",
-      description: "Solved 650+ Problems with a Streak of 350+ Days.",
+      rating: "Coding Score : 2847",
+      description: "Solved 850+ Problems with a Streak of 600+ Days.",
       style: "shadow-green-600",
     },
     {
