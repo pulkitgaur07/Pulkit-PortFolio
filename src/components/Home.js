@@ -5,7 +5,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 const Home = () => {
   return (
     <div name="home" className="w-full bg-gray-100">
-      <div className="py-12">
+      <div className="py-4 lg:py-12">
         <div className="max-w-screen-lg mx-auto flex flex-col-reverse items-center justify-center h-full px-4 md:flex-row">
           <div className="flex flex-col justify-center h-full lg:w-1/2">
             <h1 className="text-4xl sm:text-5xl font-bold">
@@ -47,7 +47,7 @@ const Home = () => {
               <img
                 src={ProfilePic}
                 alt="My profile"
-                className="mx-auto w-full md:w-1/2 mb-4 p-1 bg-white border border-gray-400 shadow-lg shadow-blue-400"
+                className="mx-auto w-full md:w-2/3 mb-4 p-1 bg-white border border-gray-400 shadow-lg shadow-blue-400"
               />
             </div>
           </div>
