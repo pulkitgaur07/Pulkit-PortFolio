@@ -20,7 +20,7 @@ const Education = () => {
       college: "Sant Pathik Vidyalaya Pashupati Nagar, Bahraich",
       course:
         "Higher Secondary, CBSE",
-      time: "Apr 2015 - Mar 2016",
+      time: "Apr 2017 - Mar 2018",
       date: "Grade: 74.4%",
       style: "shadow-blue-500",
     },
@@ -30,7 +30,7 @@ const Education = () => {
       college: "Sant Pathik Vidyalaya Pashupati Nagar, Bahraich",
       course:
         "High School, CBSE",
-      time: "Apr 2017 - Mar 2018",
+      time: "Apr 2015 - Mar 2016",
       date: "Grade: 10 CGPA",
       style: "shadow-yellow-500",
     },
