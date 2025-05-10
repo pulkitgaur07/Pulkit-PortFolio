@@ -1,4 +1,5 @@
 import React from "react";
+import Binkeyit from "../assets/Binkeyit.png";
 import SilverSpoons from "../assets/SilverSpoons.jpg";
 import portfolio from "../assets/port.jpg";
 import sudokuSolver from "../assets/sudokuSolver.png";
@@ -9,27 +10,34 @@ const Projects = () => {
     const projects = [
         {
             id : 1,
+            title : "Binkeyit",
+            src : Binkeyit,
+            link : "https://binkeyit-nine.vercel.app/",
+            github : "https://github.com/pulkitgaur07/Binkeyit-client",
+        },
+        {
+            id : 2,
             title : "SilverSpoons",
             src : SilverSpoons,
             link : "https://silverspoons.onrender.com/",
             github : "https://github.com/pulkitgaur07/namaste-react",
         },
         {
-            id : 2,
+            id : 3,
             title : "Chat App",
             src : chatapp,
             link : "https://chat-app-socket-vx7y.onrender.com",
             github : "https://github.com/pulkitgaur07/Chat_App_Socket",
         },
         {
-            id : 3,
+            id : 4,
             title : "Sudoku Solver",
             src : sudokuSolver,
             link : "https://sudokusolver07.netlify.app/",
             github : "https://github.com/pulkitgaur07/Sudoku-Solver",
         },
         {
-            id : 4,
+            id : 5,
             title : "PortFolio",
             src : portfolio,
             link : "https://pulkitportfolio.onrender.com/",
