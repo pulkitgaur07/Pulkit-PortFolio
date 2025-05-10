@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../assets/ProfilePic1.jpg";
+import ProfilePic from "../assets/Profile.jpg";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 const Home = () => {
@@ -47,7 +47,7 @@ const Home = () => {
               <img
                 src={ProfilePic}
                 alt="My profile"
-                className="mx-auto w-2/3 mb-4 p-1 bg-white border border-gray-400 rounded-full shadow-lg shadow-blue-400"
+                className="mx-auto w-full md:w-1/2 mb-4 p-1 bg-white border border-gray-400 shadow-lg shadow-blue-400"
               />
             </div>
           </div>
