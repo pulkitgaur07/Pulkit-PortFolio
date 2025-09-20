@@ -6,65 +6,124 @@ import sudokuSolver from "../assets/sudokuSolver.png";
 import chatapp from "../assets/chatapp.jpg";
 
 const Projects = () => {
-
-    const projects = [
-        {
-            id : 1,
-            title : "Binkeyit",
-            src : Binkeyit,
-            link : "https://binkeyit-nine.vercel.app/",
-            github : "https://github.com/pulkitgaur07/Binkeyit-client",
-        },
-        {
-            id : 2,
-            title : "SilverSpoons",
-            src : SilverSpoons,
-            link : "https://silverspoons.onrender.com/",
-            github : "https://github.com/pulkitgaur07/namaste-react",
-        },
-        {
-            id : 3,
-            title : "Chat App",
-            src : chatapp,
-            link : "https://chat-app-socket-vx7y.onrender.com",
-            github : "https://github.com/pulkitgaur07/Chat_App_Socket",
-        },
-        {
-            id : 4,
-            title : "Sudoku Solver",
-            src : sudokuSolver,
-            link : "https://sudokusolver07.netlify.app/",
-            github : "https://github.com/pulkitgaur07/Sudoku-Solver",
-        },
-        {
-            id : 5,
-            title : "PortFolio",
-            src : portfolio,
-            link : "https://pulkitportfolio.onrender.com/",
-            github : "https://github.com/pulkitgaur07/Pulkit-PortFolio",
-        }
-    ]
+  const projects = [
+    {
+      id: 1,
+      title: "Binkeyit",
+      src: Binkeyit,
+      link: "https://binkeyit-nine.vercel.app/",
+      github: "https://github.com/pulkitgaur07/Binkeyit-client",
+    },
+    {
+      id: 2,
+      title: "SilverSpoons",
+      src: SilverSpoons,
+      link: "https://silverspoons.onrender.com/",
+      github: "https://github.com/pulkitgaur07/namaste-react",
+    },
+    {
+      id: 3,
+      title: "Chat App",
+      src: chatapp,
+      link: "https://chat-app-socket-vx7y.onrender.com",
+      github: "https://github.com/pulkitgaur07/Chat_App_Socket",
+    },
+    {
+      id: 4,
+      title: "Sudoku Solver",
+      src: sudokuSolver,
+      link: "https://sudokusolver07.netlify.app/",
+      github: "https://github.com/pulkitgaur07/Sudoku-Solver",
+    },
+    {
+      id: 5,
+      title: "PortFolio",
+      src: portfolio,
+      link: "https://pulkitportfolio.onrender.com/",
+      github: "https://github.com/pulkitgaur07/Pulkit-PortFolio",
+    },
+  ];
 
   return (
-    <div name="projects" className="bg-gray-100">
-      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full ">
-        <div className="">
-          <div className="flex justify-center">
-          <p className="text-4xl font-bold inline border-b-4 p-1 border-gray-500 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text mb-8">Projects</p>
-          </div>
+    <div
+      name="projects"
+      className="bg-gray-100 dark:bg-gray-900 transition-colors duration-300"
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        {/* Heading */}
+        <div className="flex justify-center">
+          <p className="text-4xl font-bold inline border-b-4 p-1 border-gray-500 dark:border-gray-400 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text mb-8">
+            Projects
+          </p>
         </div>
+
+        {/* Projects Grid */}
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 sm:px-0">
-        {projects.map(({id,src,link,github,title})=>(
-            <div key={id} className="shadow-md shadow-gray-600 rounded-lg duration-200 hover:scale-105 p-2">
-            <div className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-cover" style={{ "--image-url": `url(${src})`}}>
+          {projects.map(({ id, src, link, github, title }) => (
+            <div
+              key={id}
+              className="shadow-md shadow-gray-600 dark:shadow-gray-800 bg-white dark:bg-gray-800 rounded-lg duration-200 hover:scale-105 p-2"
+            >
+              <div
+                className="p-1 h-48 rounded-lg bg-[image:var(--image-url)] bg-no-repeat bg-center bg-cover"
+                style={{ "--image-url": `url(${src})` }}
+              ></div>
+
+              <div className="font-bold text-md mt-2 text-gray-900 dark:text-white">
+                {title}
+              </div>
+
+              <div className="flex items-center space-x-4 py-2">
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-2"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Live
+                </a>
+
+                <a
+                  href={github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-2"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                  </svg>
+                  Github
+                </a>
+              </div>
             </div>
-            <div className="font-bold text-md mt-2">{title}</div>
-            <div className="flex items-center space-x-4 py-2">
-              <a href={link} target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Live</a>
-              <a href={github} target="_blank" rel="noopener noreferrer" class="flex items-center bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>Github</a>
-            </div>
-          </div>
-        ))}
+          ))}
         </div>
       </div>
     </div>

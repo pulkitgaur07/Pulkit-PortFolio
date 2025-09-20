@@ -10,4 +10,12 @@
   html {
     font-family: "Raleway", sans-serif;
   }
+  
+  body {
+    @apply bg-white text-gray-900;
+  }
+
+  .dark body {
+    @apply bg-gray-900 text-gray-100;
+  }
 }

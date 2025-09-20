@@ -11,7 +11,7 @@ const Coding = () => {
     {
       id: 1,
       src: leetcode,
-      link : 'https://leetcode.com/u/pulkitgaur07/',
+      link: "https://leetcode.com/u/pulkitgaur07/",
       title: "Leetcode",
       rating: "Max Rating : 1758",
       description: "Solved 1000+ Problems with a Streak of 750+ Days.",
@@ -20,7 +20,7 @@ const Coding = () => {
     {
       id: 2,
       src: gfg,
-      link : 'https://www.geeksforgeeks.org/user/stranger_99/',
+      link: "https://www.geeksforgeeks.org/user/stranger_99/",
       title: "GFG",
       rating: "Coding Score : 2847",
       description: "Solved 850+ Problems with a Streak of 600+ Days.",
@@ -29,7 +29,7 @@ const Coding = () => {
     {
       id: 3,
       src: hackerrank,
-      link : 'https://www.hackerrank.com/profile/Pulkitgaur9450',
+      link: "https://www.hackerrank.com/profile/Pulkitgaur9450",
       title: "HackerRank",
       rating: "6 star in Problem Solving",
       description: "5 star in C++",
@@ -38,7 +38,7 @@ const Coding = () => {
     {
       id: 4,
       src: codingNinja,
-      link : 'https://www.naukri.com/code360/profile/pulkitgaur',
+      link: "https://www.naukri.com/code360/profile/pulkitgaur",
       title: "Coding Ninja",
       rating: "Max Rating : 2280",
       description: "Solved 200+ Problems",
@@ -47,15 +47,16 @@ const Coding = () => {
     {
       id: 5,
       src: codechef,
-      link : 'https://www.codechef.com/users/stranger_99',
+      link: "https://www.codechef.com/users/stranger_99",
       title: "CodeChef",
       rating: "3 Star",
       description: "Max Rating : 1608",
       style: "shadow-gray-600",
     },
   ];
+
   return (
-    <div name="coding profile" className="w-full bg-gray-100">
+    <div name="coding profile" className="w-full bg-gray-100 dark:bg-gray-900">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col w-full">
         <div className="flex justify-center">
           <p className="text-4xl font-bold inline text-center mb-4 p-1 border-b-4 border-gray-500 bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
@@ -67,28 +68,50 @@ const Coding = () => {
             {coding.map(({ id, src, title, rating, description, style, link }) => (
               <div
                 key={id}
-                className={`w-full shadow-md rounded-md flex items-center hover:scale-105 duration-500 p-1 pr-4 ${style}`}
+                className={`w-full shadow-md rounded-md flex items-center hover:scale-105 duration-500 p-1 pr-4 ${style} dark:bg-gray-800`}
               >
                 <img
                   src={src}
-                  alt=""
+                  alt={title}
                   className="h-14 ml-2 mr-4 rounded-md shadow-md hover:scale-105 duration-200"
                 />
                 <div className="p-1 w-full rounded-md">
-                    <h2 class="text-lg font-bold">{title}</h2>
-                    <p class="text-xs text-gray-600">{rating}</p>
-                    <p class="text-xs text-gray-600">{description}</p>
-                    <p class="text-xs italic text-gray-600">{}</p>
+                  <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100">{title}</h2>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">{rating}</p>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">{description}</p>
                 </div>
-                <a href={link} target="_blank" rel="noopener noreferrer" class="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" class="mr-2" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>Link</a>
+                <a
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
+                >
+                  <svg
+                    stroke="currentColor"
+                    fill="none"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    className="mr-2"
+                    height="1em"
+                    width="1em"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                  Link
+                </a>
               </div>
             ))}
           </div>
           <div className="lg:w-1/2 flex justify-center items-center">
             <img
               src={codingTime}
-              alt="My profile"
-              className="mx-auto mb-4 p-1 bg-white border border-gray-400 shadow-lg shadow-blue-400"
+              alt="Coding illustration"
+              className="mx-auto mb-4 p-1 bg-white border border-gray-400 shadow-lg shadow-blue-400 dark:bg-gray-700"
             />
           </div>
         </div>

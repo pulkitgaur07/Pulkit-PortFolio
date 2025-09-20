@@ -8,8 +8,7 @@ const Education = () => {
       id: 1,
       src: iertlogo,
       college: "Institute of Engineering and Rural Technology, Prayagraj",
-      course:
-        "Bachelor of Technology - BTech, CSE",
+      course: "Bachelor of Technology - BTech, CSE",
       time: "Nov 2020 - Jul 2024",
       date: "Grade: First Class",
       style: "shadow-orange-500",
@@ -18,8 +17,7 @@ const Education = () => {
       id: 2,
       src: spvpnb,
       college: "Sant Pathik Vidyalaya Pashupati Nagar, Bahraich",
-      course:
-        "Higher Secondary, CBSE",
+      course: "Higher Secondary, CBSE",
       time: "Apr 2017 - Mar 2018",
       date: "Grade: 74.4%",
       style: "shadow-blue-500",
@@ -28,8 +26,7 @@ const Education = () => {
       id: 3,
       src: spvpnb,
       college: "Sant Pathik Vidyalaya Pashupati Nagar, Bahraich",
-      course:
-        "High School, CBSE",
+      course: "High School, CBSE",
       time: "Apr 2015 - Mar 2016",
       date: "Grade: 10 CGPA",
       style: "shadow-yellow-500",
@@ -37,7 +34,7 @@ const Education = () => {
   ];
 
   return (
-    <div name="education" className="w-full bg-gray-100">
+    <div name="education" className="w-full bg-gray-100 dark:bg-gray-900">
       <div className="max-w-screen-lg mx-auto p-4 flex flex-col justify-center w-full h-full">
         <div className="flex justify-center">
           <p className="text-4xl font-bold border-b-4 border-gray-500 p-1 inline bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
@@ -49,14 +46,26 @@ const Education = () => {
             ({ id, src, college, course, time, date, style }) => (
               <div
                 key={id}
-                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg my-4 flex items-center ${style}`}
+                className={`shadow-md hover:scale-105 duration-500 py-2 rounded-lg my-4 flex items-center ${style} bg-white dark:bg-gray-800`}
               >
-                <img src={src} alt="" className="h-24 w-24 ml-2 mr-4 rounded-md" />
+                <img
+                  src={src}
+                  alt=""
+                  className="h-24 w-24 ml-2 mr-4 rounded-md"
+                />
                 <div>
-                  <h2 class="text-lg font-bold">{college}</h2>
-                  <p class="text-xs text-gray-600">{course}</p>
-                  <p class="text-xs text-gray-600">{time}</p>
-                  <p class="text-xs italic text-gray-600">{date}</p>
+                  <h2 className="text-lg font-bold dark:text-gray-100">
+                    {college}
+                  </h2>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
+                    {course}
+                  </p>
+                  <p className="text-xs text-gray-600 dark:text-gray-300">
+                    {time}
+                  </p>
+                  <p className="text-xs italic text-gray-600 dark:text-gray-300">
+                    {date}
+                  </p>
                 </div>
               </div>
             )
